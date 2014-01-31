@@ -1,0 +1,12 @@
+= Requirements =
+ libicu-dev (Debian)
+
+= Setup =
+ cabal update
+ cabal sandbox init
+ cabal configure
+ cabal install -j4 --only-dependencies
+ cabal build -j4
+ mv .l-bot.conf.example .l-bot.conf
+ vim .lbot.conf
+ cabal run

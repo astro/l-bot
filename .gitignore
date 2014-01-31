@@ -1,0 +1,9 @@
+dist*
+*.hi
+*.o
+*.swp
+.hsenv*
+cabal-dev/
+.cabal-sandbox
+cabal.sandbox.config
+.l-bot.conf

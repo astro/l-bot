@@ -1,0 +1,6 @@
+{
+  "jid": "bot@jabber.c3d2.de/λ-Bot",
+  "pwd": "password",
+  "prefix": "-",
+  "mucs": ["bot@chat.c3d2.de/λ-Bot", "c3d2@chat.c3d2.de/λ-Bot"]
+}
