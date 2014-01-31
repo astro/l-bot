@@ -3,22 +3,17 @@
 module Main where
 
 import Network
-import Network.HTTP
 import Network.Xmpp
 import Network.Xmpp.IM
 import Data.Aeson
-import Control.Monad
 import Control.Monad.Reader
 import Data.Default
-import Data.List
 import qualified Data.Text as T
 import qualified Data.Map as M
 import Data.Maybe
 import Data.XML.Types
 import System.Log.Logger
 import Control.Applicative
-import qualified Data.ByteString.Lazy as B
-import qualified Data.ByteString.Lazy.Char8 as BC
 
 import Commands
 import Config
