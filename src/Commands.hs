@@ -22,13 +22,16 @@ data Command = Command
   , showInInfo  :: Bool
   }
 
-data HQStatus = HQStatus { msg        :: !T.Text
+data HQStatus = HQStatus { _open      :: !Bool
+                         , msg        :: !T.Text
                          , lastchange :: Integer
                          }
 
+-- | FIXME: Version?
 instance FromJSON HQStatus where
   parseJSON (Object v) =
-    HQStatus <$> ((v .: "state") >>= (.: "message"))
+    HQStatus <$> ((v .: "state") >>= (.: "open"))
+             <*> ((v .: "state") >>= (.: "message"))
              <*> ((v .: "state") >>= (.: "lastchange"))
   parseJSON _ = mzero
 
