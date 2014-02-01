@@ -40,7 +40,8 @@ getHQStatus _ = do
   src <- getResponseBody =<< simpleHTTP (getRequest "http://www.hq.c3d2.de/spaceapi.json")
   let status = eitherDecode $ BC.pack src
   case status of
-    Left err -> return "Could not fetch status!"
+    Left err -> return $ T.pack $
+                "Error: " ++ err
     Right st -> do
       t <- toTime st
       return $ T.concat [msg st, " (", T.pack t, ")"]
