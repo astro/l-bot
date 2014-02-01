@@ -19,7 +19,7 @@ executable l-bot
   main-is: Main.hs
   -- other-modules:       
   -- other-extensions:
-  build-depends:       base >=4.5 && <4.6,
+  build-depends:       base >=4.5 && <5,
                        pontarius-xmpp >= 0.3.0.3,
                        hslogger,
                        data-default,
